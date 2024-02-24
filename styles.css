@@ -1,0 +1,694 @@
+/* Arabella Helms */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* -----------end css reset----------- */
+
+/* -----------base code -----------*/
+:root{
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --darkGray: #222222;
+    --lightGray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+#skip{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+body{
+    background-color: var(--white);
+    background-image: linear-gradient(var(--teal), var(--white) 5%);
+}
+main{
+    margin: 0 auto;
+}
+main img{ 
+    max-width: 100%;
+}
+            
+h1, h2, h3{
+    font-family: "Molle", cursive;
+    font-size: 1rem;
+}
+h4, p, q, small, nav, button, form, .form-required, a{
+    font-family: "Montserrat", sans-serif;
+}
+h3{
+    padding: 10px 60px;
+}
+h4{
+    text-transform:uppercase;
+}
+h1{
+    font-size: 3rem;
+    padding:0 60px;
+}
+h2, h3{
+    font-size: 2.5rem;
+}
+h4{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+p, q, .form-required{
+    font-size: 1.25rem;
+}
+/* -----------header section -----------*/
+header p{
+    max-width: 70%;
+    line-height: 2rem;
+    padding: 0 60px 30px 60px;
+}
+header{
+    display: grid;
+    grid-template-areas:
+    'logo menu'
+    'title title'
+    'snippet snippet';
+    grid-template-columns: 50%; 
+}
+#logo{
+    grid-area: logo;  
+    padding-top: 10px;
+}
+#logo img{
+    height: 80%;
+}
+h1{
+    grid-area: title;
+}
+header p{
+    grid-area: snippet;
+}
+nav{
+    grid-area: menu;
+}
+
+
+/* -----------Intro section -----------*/
+#intro{
+    margin-bottom: 10px;
+}
+#intro h2, #intro p{
+    padding: 10px 58px;
+}
+#intro p{
+    max-width: 100%;
+    line-height: 2rem;
+    font-size: 1rem;
+}
+#intro img{
+    width: 100%;
+    margin-top: 15px;
+}
+#plan, #testimonials, #contact{
+    padding: 20px 10px;
+    margin-bottom: 20px;
+}
+
+/* -----------plan section -----------*/
+#plan{
+    background-color: var(--yellow); 
+}
+#plan section{
+    background-color: var(--teal);
+    display: block;
+    width: 75%;
+    height: 302px;
+    border-radius: 10px;
+    border: solid white 3px;
+    text-align: center;
+    margin: 8px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+#plan img{
+    max-height: 80%;
+    margin-top: 20px;
+}
+#plan h4{
+    margin-top: 20px;
+}
+#plan section:hover{
+    background-color: var(--blue);
+}
+
+/* -----------Testimonials section----------- */
+#testimonials section{
+    text-align: center;
+    margin: 0 auto;
+}
+#testimonials h4{
+    margin: 10px;
+}
+#testimonials p{
+    margin-bottom: 5px;
+}
+q{
+    quotes: "“" "”" "‘" "’";
+    font-style: italic;
+    width: 65%;
+    display: inline-block;
+    text-align: center;
+    line-height: 1.5rem;
+}
+q:before {
+    content: open-quote;
+}
+q:after {
+    content: close-quote;
+} 
+#testimonials img{
+margin-top: 15px;
+}
+
+/* -----------Destination Section -----------*/
+#about{
+    background-color: var(--blue);
+    padding: 20px 0;
+}
+#about div{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 20px;
+    margin: 20px 70px;
+}
+#about img{
+    height: 100px;
+}
+#about h4, #about p{
+    margin-top: 10px;
+}
+
+/*----------- form  section -----------*/
+.form-required{
+    font-style: italic;
+}
+form div, select{
+    width: 75%;
+    margin: 0 auto;
+}
+form div, fieldset{
+    display: flex;
+    flex-direction: column;
+}
+label, legend, input[type="submit"]{
+    font-weight: 600;
+    text-transform: uppercase;  
+}
+label, fieldset, input[type="submit"]{
+    margin-top: 20px;
+}
+label, input::placeholder, input, legend{
+    font-size: 1.25rem;
+    color: var(--black);
+}
+fieldset label{
+    text-transform: capitalize;
+    font-weight: 400;
+}
+#names label:first-of-type{
+    margin-top: 0;
+}
+input, select{
+    height: 75px;
+    border: 3px solid var(--purple);
+}
+.required{
+    color: var(--purple);
+    font-size: 2rem;
+    font-weight: 400; 
+}
+input::placeholder{
+    padding-left: 10px;
+    font-family: Montserrat;
+}
+select {
+    display: none;
+    width: 100%;
+    font-family: inherit;
+    font-size: 1.25rem;
+    cursor: pointer;
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+    height: 83px;
+}
+.custom-select, select option{
+    width: 100%;
+    margin: 0;
+}
+input[type="submit"]{
+    background-color: var(--purple);
+    color: var(--white);
+    font-family: inherit;
+    text-transform: uppercase;
+    border: 0px;
+}
+input[type="submit"]:hover{
+    background-color: var(--darkGray);
+}
+/* ----------- radio labels -----------*/
+.radio-label{
+    padding-left: 15px;
+}
+.radio-input{
+    vertical-align: middle; 
+}
+input[type="radio"]:hover{
+    cursor: pointer;
+}
+input[type="radio"]{
+    width: 75px;
+    height: 75px;
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: var(--purple);
+    border: 0.15em solid var(--purple);
+    border-radius: 50%;
+    display: inline-grid; 
+    place-content: center;
+}
+input[type="radio"]::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transform: scale(0);
+    background-color: var(--purple);
+    transition: 120ms transform ease-in-out;
+}
+input[type="radio"]:checked::before{
+    transform: scale(1);
+}
+
+/* ----------- footer -----------*/
+footer{
+    background-color: var(--lightGray);
+    padding: 30px 0;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+footer p{
+    font-size: 1rem;
+    padding-bottom: 20px;
+}
+ footer a{
+    font-size: 1rem;
+    color: var(--black);
+    text-decoration: none;
+    padding: 10px;
+}
+
+
+/*----------- media queries -----------*/
+@media screen and (max-width: 767px){
+    /* -----------menu -----------*/
+    #menu-toggle {
+        display: block;
+        position: relative;
+        top: 20px; 
+        z-index: 1;  
+        -webkit-user-select: none;
+        -moz-user-select: none;
+            -ms-user-select: none;
+                user-select: none;
+    }
+    #menu-toggle a {
+        text-decoration: none;
+        color: #232323;
+        -webkit-transition: color 0.3s ease;
+        -o-transition: color 0.3s ease;
+        transition: color 0.3s ease;
+    }
+    #menu-toggle a:hover {
+        color: #4f7794;
+    }
+    /* The hamburger button hidden inside an input element */
+    #menu-toggle input {
+        display: block;
+        background-color: white;
+        height: 50px;
+        position: absolute;
+        top: -5px;
+        left: -8px;  
+        padding: 0;
+        cursor: pointer;  
+        opacity: 0; /* hide this */
+        z-index: 2; /* and place it over the hamburger */  
+        -webkit-touch-callout: none;
+    }
+    #menu-toggle label {
+        position: relative;
+        display: block;
+
+        height: 50px;
+        text-align: center;
+    }
+    #menu-toggle label span {
+        display: none;
+    }
+    /* -----------Hamburger-----------*/
+    #menu-toggle label  {
+        display: block;
+        line-height: 50px;
+        position: relative;
+        background: var(--yellow);
+        z-index: 1;  
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+    /* Change the color of the hamburger when toggled*/
+    #menu-toggle input:checked + label {
+        background: black;
+        color: white;
+        width: 200%; 
+        top: -40px;
+        left: -100%;
+        transition: all 0.3s ease;
+    }
+    /*Use absolute positioning to place the menu off-screen*/
+    #menu-toggle ul{
+        position: absolute;
+        width: 200%;
+        list-style-type: none;
+    /* Hide the menu off-screen to the left */
+        left: 100%;
+    }
+    #menu-toggle li {
+        font-size: 22px;
+    }
+    /* Slide the menu in from left when the input is checked*/
+    #menu-toggle input:checked ~ ul {
+        left: -100%;
+        top: -10px; 
+    }
+    nav ul{
+        width: 100%;
+    }
+    nav li{
+        border: .5px solid var(--black);
+        background-color: var(--teal);  
+        line-height: 100px;
+    }
+    nav li a{
+        display: block;
+        text-align: center;
+        margin: auto auto;
+        color: var(--black);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    nav li a:hover{
+        background-color: var(--yellow);
+    }
+    nav h2{
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 768px){
+    body{
+        background-image: linear-gradient(var(--teal), var(--white) 8%);
+    }
+    header{
+        display: grid;
+        grid-template-areas: 
+        'logo title title'
+        'logo snippet snippet'
+        'menu menu menu' ;
+        grid-template-columns: 20%;
+        padding-top: 60px;
+    }
+    #logo{
+        grid-area: logo;
+    }
+    h1{
+        grid-area: title;
+    }
+    header p{
+        padding-top: 10px;
+        grid-area: snippet;
+    }
+    #menu-toggle input, #menu-toggle label, #menu-toggle h2{
+        display: none;
+    }
+    #menu-toggle ul{
+        grid-area: menu;
+    }
+    nav{
+        margin: 0 40px 50px 40px;
+    }
+    ul{
+        display: flex;
+        justify-content: space-between;
+    }
+    nav li{
+        background-color: var(--white);
+        border: none;
+        width: 22%;
+        text-align: center;
+        margin: auto auto;
+        vertical-align: middle;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    nav li a{
+        color: var(--black);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    nav li:hover{
+        background-color: var(--teal);
+    }
+    .active{
+        background-color: var(--yellow);
+    }
+    #img-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 60px;
+        grid-column-gap: 1.5%;
+    }
+    #intro{
+        margin-bottom: 20px;
+    }
+    #intro img:first-of-type{
+        grid-column-start: 2;
+        grid-column-end: -1;
+        display: inline-flex;
+        grid-row-start: 1;
+    }
+    #intro img:nth-of-type(2){
+        grid-column-start: 1;
+        grid-column-end: 2;
+        display: inline-flex;
+    }
+    #img-grid picture {
+        grid-column:span 2;
+    }
+    #plan div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 40px;
+    }
+    #plan section{
+        height: 250px;
+        width: 93%;
+    }
+    #plan img{
+        height: 60%;
+    }
+    #testimonials div{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    q{
+        width: 75%;
+    }
+    #about div{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    fieldset{
+        flex-direction: row;
+        justify-content: space-between; 
+    }
+    input[type="submit"]{
+        width: 50%;
+        align-self: flex-end;
+    } 
+    footer{
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: baseline;
+        padding: 0 55px;
+    }
+}
+
+@media screen and (min-width: 1920px){
+    body{
+        background-image: linear-gradient(var(--teal), var(--white) 6%);
+    }
+    #intro p, section p, q{
+        font-size: 20px;
+    }
+    header{
+       grid-template-columns: 1fr 8fr;
+    }
+    h1{
+        font-size: 72px;
+    }
+    h2{
+        font-size: 45px;
+    }
+    h4{
+        font-size: 30px;
+    }
+    header p, header h1{
+        padding: 30px 0 0 0;
+    }
+    #logo img{
+        height: 100%;
+    }
+    nav ul{
+        position: absolute;
+        top: 0;
+        right: -11px;
+    }
+    nav li{
+        margin-left: 20px;
+        width: 150px;
+    }
+    #intro{
+        display: grid;
+        grid-template-columns: 50%;
+        grid-template-rows: 1fr 9fr;
+        margin: 90px 30px 0px 30px;
+    }
+    picture{
+        margin-top: -20px;
+    }
+    #img-grid{
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-gap: 20px;
+    }
+    #img-grid img, picture{
+        height: 90%;
+    }
+    #plan, #testimonials, #about, #contact{
+        padding: 75px 50px;
+    }
+    #plan div, #testimonials div{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    #plan img{
+        height: 75%;
+    }
+    #plan section{
+        width: 398px;
+        height: 300px;
+    }
+    q{
+        width: 80%;
+    }
+    #about div{
+        margin: 0 350px;
+    }
+    form{
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr;
+       grid-column-gap: 1.25rem;
+       margin: 0 60px;
+    }
+    form div{
+        width: 100%;
+    }   
+    label{
+        margin-top: 9px;
+    } 
+    #selects label{
+        margin-top: 5px;
+    }
+    fieldset{
+        margin-top: 0;
+    }
+    legend{
+        margin-bottom: 0;
+    }
+    footer{
+        justify-content: flex-end;
+        padding-right: 90px;
+    }
+    footer p{
+        padding-right: 62%;
+    }
+}  
